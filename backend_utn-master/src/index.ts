@@ -13,7 +13,6 @@ import fs from "node:fs"
 import emailService from "./services/emailService"
 
 dotenv.config()
-
 declare global {
   namespace Express {
     interface Request {

@@ -1,0 +1,15 @@
+meta {
+  name: update product
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/products
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

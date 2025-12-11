@@ -1,0 +1,15 @@
+meta {
+  name: register user
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/auth/register
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
