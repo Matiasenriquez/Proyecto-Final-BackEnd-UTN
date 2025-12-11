@@ -1,0 +1,14 @@
+::ffff:127.0.0.1 GET /products 200 4283 - 61.672 ms
+::ffff:127.0.0.1 GET /product 404 54 - 0.756 ms
+::1 GET /products 200 26 - 84.091 ms
+::1 GET /product 404 54 - 0.980 ms
+::1 GET /products 200 26 - 64.257 ms
+::1 GET /products 200 26 - 72.245 ms
+::1 GET /products 200 26 - 66.899 ms
+::1 GET /products 200 26 - 72.227 ms
+::1 GET /products 200 26 - 64.727 ms
+::1 GET /products 200 26 - 111.582 ms
+::1 GET /products 200 26 - 80.585 ms
+::1 POST /auth/register 201 159 - 314.693 ms
+::1 POST /auth/login 200 234 - 176.923 ms
+::1 GET /products 200 26 - 70.343 ms
