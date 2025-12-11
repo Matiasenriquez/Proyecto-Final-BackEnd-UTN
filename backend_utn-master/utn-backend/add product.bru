@@ -5,11 +5,26 @@ meta {
 }
 
 post {
-  url: http://localhost:3000/products
-  body: none
-  auth: inherit
+  url: https://proyecto-final-backend-utn.onrender.com/products
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2FjZjc3MTAyYTY1M2Y4OTdiY2IzNiIsImVtYWlsIjoiZ2FicmllbGFAZ21haWwuY29tIiwiaWF0IjoxNzY1NDYyMDAwLCJleHAiOjE3NjU0NjU2MDB9.nCuDfsam-Dzq8oVDXs1YubdAgH3fr8CMEvTBiWiAQUI
+}
+
+body:json {
+  {
+    "name": "Laptop HP",
+    "description": "Una laptop de HP",
+    "stock": 2,
+    "category": "Tecnología",
+    "price": 1500
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

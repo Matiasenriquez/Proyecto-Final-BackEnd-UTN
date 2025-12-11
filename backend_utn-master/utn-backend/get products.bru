@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: http://localhost:3000/products
-  body: none
-  auth: inherit
+  url: https://proyecto-final-backend-utn.onrender.com/products
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5M2FiMWYwYjFlYjRjYTY1NTdmN2FjZSIsImVtYWlsIjoibWF0aWFzQGdtYWlsLmNvbSIsImlhdCI6MTc2NTQ1NDM4MywiZXhwIjoxNzY1NDU3OTgzfQ.aASETSR0mbCIAoqD4GAb5R_M9leStRkjmqaOaU55eY8
 }
 
 settings {
