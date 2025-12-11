@@ -12,3 +12,13 @@
 ::1 POST /auth/register 201 159 - 314.693 ms
 ::1 POST /auth/login 200 234 - 176.923 ms
 ::1 GET /products 200 26 - 70.343 ms
+::ffff:127.0.0.1 GET /products? 200 26 - 77.337 ms
+::ffff:127.0.0.1 GET /products? 304 - - 72.330 ms
+::ffff:127.0.0.1 GET /products? 304 - - 78.408 ms
+::ffff:127.0.0.1 GET /products? 200 26 - 80.954 ms
+::1 GET /products 200 26 - 600.530 ms
+::1 POST /products 401 48 - 0.787 ms
+::1 GET /products 200 26 - 67.543 ms
+::1 POST /auth/login 200 234 - 186.658 ms
+::1 POST /products 201 196 - 87.849 ms
+::1 GET /products 200 198 - 72.254 ms
