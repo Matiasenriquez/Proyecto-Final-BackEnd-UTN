@@ -14,9 +14,14 @@ class ProductController {
 
       const filter: any = {}
 
+      //consigna 6, filtros de busqueda
+      //Filtrar por nombre (búsqueda parcial)
       if (name) filter.name = new RegExp(String(name), "i")
+      //filtrar por stock
       if (stock) filter.stock = Number(stock)
+      //filtrar por categoria
       if (category) filter.category = new RegExp(String(category), "i")
+      //filtrar por precios minimo y maximo
       if (minPrice || maxPrice) {
         filter.price = {}
         // maxPrice -> si tengo precio máximo quiero un objeto con un precio menor

@@ -3,6 +3,8 @@ import bcrypt from "bcryptjs"
 import User from "../model/UserModel"
 import jwt from "jsonwebtoken"
 import dotenv from "dotenv"
+//punto 7, esquema de autenticación para usuarios
+import { authSchema } from "../validators/authValidators"
 dotenv.config()
 
 const SECRET_KEY = process.env.JWT_SECRET!
@@ -14,6 +16,12 @@ class AuthController {
   static register = async (req: Request, res: Response): Promise<void | Response> => {
     try {
       const { email, password } = req.body
+
+      //aplicacion del validador con zod
+      const validator = authSchema.safeParse(req.body)
+      if (!validator.success) {
+        return res.status(400).json({ success: false, error: validator.error.flatten().fieldErrors });
+      }
 
       if (!email || !password) {
         return res.status(400).json({ success: false, error: "Datos invalidos" })
@@ -43,6 +51,13 @@ class AuthController {
   static login = async (req: Request, res: Response): Promise<void | Response> => {
     try {
       const { email, password } = req.body
+
+      //aplicacion del validador con zod
+      const validator = authSchema.safeParse(req.body)
+
+      if (!validator.success) {
+        return res.status(400).json({ success: false, error: validator.error.flatten().fieldErrors });
+      }
 
       if (!email || !password) {
         return res.status(400).json({ success: false, error: "Datos invalidos" })
